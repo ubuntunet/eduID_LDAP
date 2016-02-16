@@ -1,0 +1,44 @@
+version: 1
+
+dn: uid=lclerk,ou=people,dc=ubuntunet,dc=net
+objectClass: eduPerson
+objectClass: schacPersonalCharacteristics
+objectClass: schacContactLocation
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: lclerk
+userPassword:: MTIz
+givenName: Linus
+sn: Clerk
+cn: Linus Clerk
+displayName: Linus Clerk
+mail: linus.clerk@ubuntunet.net
+eduPersonPrincipalName: linus.clerk@ubuntunet.net
+eduPersonAffiliation: Employee
+schacGender: 1
+schacHomeOrganization: ubuntunet.net
+schacHomeOrganizationType: urn:schac:homeOrganizationType:int:RREN
+
+dn: uid=mstuder,ou=people,dc=ubuntunet,dc=net
+objectClass: eduPerson
+objectClass: schacPersonalCharacteristics
+objectClass: schacContactLocation
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: mstuder
+userPassword:: MTIa
+givenName: Marissa
+sn: Studer
+cn: Marissa Studer
+displayName: Mari Studer
+mail: studer@uni1.org
+eduPersonPrincipalName: 234907-8132748123@uni1.org
+eduPersonAffiliation: Student
+schacGender: 2
+schacHomeOrganization: uni1.org
+schacHomeOrganizationType: urn:schac:homeOrganizationType:mw:higherEducationalInstitution
+
