@@ -1,4 +1,4 @@
-vagrant_ldap ansible_ssh_host=192.168.33.11 ansible_ssh_port=22
+vagrant_ldap ansible_ssh_host=192.168.33.11
 
 [vagrant]
 vagrant_ldap
