@@ -1,0 +1,21 @@
+Create a random vault password
+```
+openssl rand -base64 32 > ~/.ansible_vault_pass
+```
+
+Copy, populate and encrypt secrets.yml
+```
+cp secrets.yml.example secrets.yml
+vi secrets.yml
+ansible-vault encrypt secrets.yml --vault-password-file ~/.ansible_vault_pass
+```
+
+Run the Playbook
+```
+ansible-playbook -i [development|staging] ldap.yml --vault-password-file ~/.ansible_vault_pass
+```
+
+Show the secret vars
+```
+ansible-vault view secrets.yml --vault-password-file ~/.ansible_vault_pass
+``
