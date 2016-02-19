@@ -1,4 +1,11 @@
-version: 2
+version: 1
+
+dn: dc=ubuntunet,dc=net
+changetype: add
+objectClass: top
+objectclass: dcObject
+objectClass: organizationalUnit
+ou: people
 
 dn: ou=people,dc=ubuntunet,dc=net
 changetype: add
