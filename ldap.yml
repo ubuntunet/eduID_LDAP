@@ -1,5 +1,7 @@
 - name: Install OpenLDAP
   hosts: ldap
   become: true
+  vars_files:
+    - secrets.yml
   roles:
   - role: openldap_server

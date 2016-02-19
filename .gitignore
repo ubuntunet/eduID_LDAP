@@ -2,3 +2,5 @@
 *.key
 
 .vagrant
+
+secrets.yml
