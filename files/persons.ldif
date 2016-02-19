@@ -1,4 +1,10 @@
-version: 1
+version: 2
+
+dn: ou=people,dc=ubuntunet,dc=net
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: people
 
 dn: uid=lclerk,ou=people,dc=ubuntunet,dc=net
 objectClass: eduPerson
@@ -9,7 +15,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 uid: lclerk
-userPassword:: MTIz
+userPassword: MTIz
 givenName: Linus
 sn: Clerk
 cn: Linus Clerk
@@ -30,7 +36,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 uid: mstuder
-userPassword:: MTIa
+userPassword: MTIa
 givenName: Marissa
 sn: Studer
 cn: Marissa Studer
