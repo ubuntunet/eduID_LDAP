@@ -19,3 +19,8 @@ Show the secret vars
 ```
 ansible-vault view secrets.yml --vault-password-file ~/.ansible_vault_pass
 ``
+
+If you changed your rootpw, you need to remove the slapd service on the server manually for the new rootpw to be picked up. This has also helped me in other hopeless situations.
+```
+sudo aptitude purge slapd
+```
