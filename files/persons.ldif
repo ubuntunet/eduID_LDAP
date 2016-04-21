@@ -55,3 +55,25 @@ schacGender: 2
 schacHomeOrganization: uni1.org
 schacHomeOrganizationType: urn:schac:homeOrganizationType:mw:higherEducationalInstitution
 
+
+dn: uid=rfurt,ou=people,dc=ubuntunet,dc=net
+objectClass: eduPerson
+objectClass: schacPersonalCharacteristics
+objectClass: schacContactLocation
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: rfurt
+userPassword: MTIr
+givenName: Renato
+sn: Furt
+cn: Renato Furt
+displayName: Renato Furt
+mail: renato.furt@uni1.org
+eduPersonPrincipalName: ablaer-uailerujbasd@uni1.org
+eduPersonAffiliation: faculty
+schacGender: 1
+schacHomeOrganization: uni1.org
+schacHomeOrganizationType: urn:schac:homeOrganizationType:mw:higherEducationalInstitution
+
