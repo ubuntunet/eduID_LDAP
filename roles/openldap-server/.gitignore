@@ -1,8 +1,0 @@
-*.crt
-*.key
-
-*.retry
-
-.vagrant
-
-secrets.yml
