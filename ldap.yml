@@ -4,4 +4,4 @@
   # vars_files:
   #   - secrets.yml.example
   roles:
-    - openldap_server
+    - openldap-server
