@@ -1,3 +1,0 @@
-[submodule "roles/openldap_server"]
-	path = roles/openldap_server
-url=git@github.com:ubuntunet/openldap_server.git

@@ -22,7 +22,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 uid: lclerk
-userPassword: MTIz
+userPassword: MTz
 givenName: Linus
 sn: Clerk
 cn: Linus Clerk
@@ -43,7 +43,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 uid: mstuder
-userPassword: MTIa
+userPassword: MTa
 givenName: Marissa
 sn: Studer
 cn: Marissa Studer
@@ -65,7 +65,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 uid: rfurt
-userPassword: MTIr
+userPassword: MTr
 givenName: Renato
 sn: Furt
 cn: Renato Furt
