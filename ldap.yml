@@ -2,6 +2,6 @@
   hosts: ldap
   become: true
   vars_files:
-    - secrets.yml
+    - secrets.yml.example
   roles:
   - role: openldap_server
