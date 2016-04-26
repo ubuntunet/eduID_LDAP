@@ -1,0 +1,13 @@
+gcloud_ldap ansible_ssh_host=104.155.48.139
+
+[gcloud]
+gcloud_ldap
+
+[gcloud:vars]
+ansible_user=hydra
+
+[ldap]
+gcloud_ldap
+
+[staging:children]
+ldap

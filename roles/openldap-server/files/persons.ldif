@@ -1,0 +1,79 @@
+version: 1
+
+dn: dc=ubuntunet,dc=net
+changetype: add
+objectClass: top
+objectclass: dcObject
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=people,dc=ubuntunet,dc=net
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: people
+
+dn: uid=lclerk,ou=people,dc=ubuntunet,dc=net
+objectClass: eduPerson
+objectClass: schacPersonalCharacteristics
+objectClass: schacContactLocation
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: lclerk
+userPassword: MTIz
+givenName: Linus
+sn: Clerk
+cn: Linus Clerk
+displayName: Linus Clerk
+mail: linus.clerk@ubuntunet.net
+eduPersonPrincipalName: linus.clerk@ubuntunet.net
+eduPersonAffiliation: employee
+schacGender: 1
+schacHomeOrganization: ubuntunet.net
+schacHomeOrganizationType: urn:schac:homeOrganizationType:int:RREN
+
+dn: uid=mstuder,ou=people,dc=ubuntunet,dc=net
+objectClass: eduPerson
+objectClass: schacPersonalCharacteristics
+objectClass: schacContactLocation
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: mstuder
+userPassword: MTIa
+givenName: Marissa
+sn: Studer
+cn: Marissa Studer
+displayName: Mari Studer
+mail: studer@uni1.org
+eduPersonPrincipalName: 234907-8132748123@uni1.org
+eduPersonAffiliation: student
+schacGender: 2
+schacHomeOrganization: uni1.org
+schacHomeOrganizationType: urn:schac:homeOrganizationType:mw:higherEducationalInstitution
+
+
+dn: uid=rfurt,ou=people,dc=ubuntunet,dc=net
+objectClass: eduPerson
+objectClass: schacPersonalCharacteristics
+objectClass: schacContactLocation
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: rfurt
+userPassword: MTIr
+givenName: Renato
+sn: Furt
+cn: Renato Furt
+displayName: Renato Furt
+mail: renato.furt@uni1.org
+eduPersonPrincipalName: ablaer-uailerujbasd@uni1.org
+eduPersonAffiliation: faculty
+schacGender: 1
+schacHomeOrganization: uni1.org
+schacHomeOrganizationType: urn:schac:homeOrganizationType:mw:higherEducationalInstitution
+
