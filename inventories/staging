@@ -1,10 +1,10 @@
-gcloud_ldap ansible_ssh_host=104.155.48.139
+gcloud_ldap ansible_ssh_host=168.253.217.49
 
 [gcloud]
 gcloud_ldap
 
 [gcloud:vars]
-ansible_user=hydra
+ansible_user=ubuntu
 
 [ldap]
 gcloud_ldap
