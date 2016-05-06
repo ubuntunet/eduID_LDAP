@@ -4,6 +4,18 @@ include         /etc/ldap/schema/inetorgperson.schema
 include         /etc/ldap/schema/nis.schema
 include         /etc/ldap/schema/eduperson.schema
 include         /etc/ldap/schema/schac.schema
+
+#GOSA ldap schemas for FusionDirectory, order is important
+include         /etc/ldap/schema/gosa/samba3.schema
+include         /etc/ldap/schema/gosa/gofon.schema
+include         /etc/ldap/schema/gosa/gosystem.schema
+include         /etc/ldap/schema/gosa/goto.schema
+include         /etc/ldap/schema/gosa/gosa-samba3.schema
+include         /etc/ldap/schema/gosa/gofax.schema
+include         /etc/ldap/schema/gosa/goserver.schema
+include         /etc/ldap/schema/gosa/goto-mime.schema
+include         /etc/ldap/schema/gosa/trust.schema
+
 pidfile         /var/run/slapd/slapd.pid
 
 argsfile        /var/run/slapd/slapd.args

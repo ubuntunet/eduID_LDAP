@@ -1,3 +1,9 @@
+## Setup FusionDirectory
+
+Go to https://{{ fqdn}}/fusiondirectory and follow the instructions
+
+
+
 Create a random vault password
 ```
 openssl rand -base64 32 > ~/.ansible_vault_pass

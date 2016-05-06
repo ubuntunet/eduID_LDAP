@@ -1,0 +1,19 @@
+- name: Install FusionDirectory
+  apt: pkg={{ item }} update_cache=yes cache_valid_time=36000
+  with_items:
+    - fusiondirectory
+    - libapache2-mod-php
+    - php-mbstring
+    - php-mdb2
+  notify: 
+    - restart apache
+    - restart slapd
+
+- name: Don't check for schema version. TEMPORARY FIX. TO BE REMOVED LATER
+  copy: src=functions.inc dest=/usr/share/fusiondirectory/include/functions.inc
+  notify: 
+    - restart apache
+    - restart slapd
+
+- name: Fix permission for /etc/FusionDirectory
+  file: path=/etc/fusiondirectory group=www-data mode=0750 state=directory recurse=yes
