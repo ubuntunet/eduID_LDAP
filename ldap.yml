@@ -2,10 +2,11 @@
   hosts: ldap
   become: true
   vars_files:
-    - secrets.yml.example
+    - group_vars/secrets.yml
   roles:
     - openldap_server
     # - web_ui
+    - newrelic
 
   handlers:
   - name: restart apache
