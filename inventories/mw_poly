@@ -5,3 +5,6 @@ ansible_user=smisv1
 
 [ldap]
 wingu
+
+[mw_poly:children]
+ldap

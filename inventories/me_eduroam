@@ -1,0 +1,10 @@
+wingu ansible_host=168.253.217.12
+
+[ldap:vars]
+ansible_user=ubuntu
+
+[ldap]
+wingu
+
+[me_eduroam:children]
+ldap

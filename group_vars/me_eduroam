@@ -1,0 +1,12 @@
+openldap_server_domain_name: ldap.me
+openldap_server_enable_ssl: False
+openldap_server_country: UG
+openldap_server_location: Entebbe
+openldap_server_organization: UbuntuNet Alliance
+
+ldap_dn: ou=people,dc=ldap,dc=me
+
+lam:
+  enabled: False
+newrelic:
+  enabled: False  

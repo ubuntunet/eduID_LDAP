@@ -5,3 +5,6 @@ ansible_user=ubuntu
 
 [ldap]
 wingu
+
+[ubuntunet:children]
+ldap
