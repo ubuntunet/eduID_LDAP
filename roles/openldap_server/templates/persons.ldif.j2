@@ -1,12 +1,12 @@
 version: 1
 
-dn: ou=people,dc=ubuntunet,dc=net
+dn: {{ ldap_dn }}
 changetype: add
 objectClass: organizationalUnit
 objectClass: top
 ou: people
 
-dn: uid=lclerk,ou=people,dc=ubuntunet,dc=net
+dn: uid=lclerk,{{ ldap_dn }}
 objectClass: eduPerson
 objectClass: schacPersonalCharacteristics
 objectClass: schacContactLocation
@@ -26,8 +26,9 @@ eduPersonAffiliation: employee
 schacGender: 1
 schacHomeOrganization: ubuntunet.net
 schacHomeOrganizationType: urn:schac:homeOrganizationType:int:RREN
+o: UbuntuNet Alliance
 
-dn: uid=mstuder,ou=people,dc=ubuntunet,dc=net
+dn: uid=mstuder,{{ ldap_dn }}
 objectClass: eduPerson
 objectClass: schacPersonalCharacteristics
 objectClass: schacContactLocation
@@ -47,9 +48,9 @@ eduPersonAffiliation: student
 schacGender: 2
 schacHomeOrganization: uni1.org
 schacHomeOrganizationType: urn:schac:homeOrganizationType:mw:higherEducationalInstitution
+o: Number One Uni
 
-
-dn: uid=rfurt,ou=people,dc=ubuntunet,dc=net
+dn: uid=rfurt,{{ ldap_dn }}
 objectClass: eduPerson
 objectClass: schacPersonalCharacteristics
 objectClass: schacContactLocation
@@ -69,4 +70,4 @@ eduPersonAffiliation: faculty
 schacGender: 1
 schacHomeOrganization: uni1.org
 schacHomeOrganizationType: urn:schac:homeOrganizationType:mw:higherEducationalInstitution
-
+o: SWITCHSWATCH
