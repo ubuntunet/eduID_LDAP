@@ -1,0 +1,6 @@
+openldap_server_domain_name: poly.ac.mw
+# openldap_server_rootpw: jk66Wd8x
+openldap_server_enable_ssl: false
+# openldap_server_country: MW
+# openldap_server_location: Blantyre
+# openldap_server_organization: Polytechnic
