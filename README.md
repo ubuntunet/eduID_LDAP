@@ -1,8 +1,17 @@
+# Ansible Playbook to setup LDAP on Ubuntu
+
+## Activate LDAP Account Management (LAM)
+
+LAM is a webfront end for LDAP with a rich feature set (https://www.ldap-account-manager.org/)
+
+* Enable the 'lam' role by uncommenting it in ldap.yml
+* (Re)Play the playbook
+* Go to https://{{ fqdn}}
+
 ## Setup FusionDirectory
 
-Go to https://{{ fqdn}}/fusiondirectory and follow the instructions
-
-
+* Enable the 'webui' role by uncommenting it in ldap.yml
+* Go to https://{{ fqdn}}/fusiondirectory and follow the instructions
 
 Create a random vault password
 ```

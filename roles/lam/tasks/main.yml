@@ -1,0 +1,14 @@
+- name: Install required PHP modules
+  apt: pkg={{ item }} update_cache=yes cache_valid_time=36000
+  with_items:
+    - php-xml
+    - php-zip
+
+- name: Download LDAP Account Manager (LAM)
+  get_url: > 
+    url=http://downloads.sourceforge.net/project/lam/LAM/5.4/ldap-account-manager_5.4-1_all.deb
+    dest=/opt
+
+- name: Install LAM
+  command: dpkg -i ldap-account-manager_5.4-1_all.deb chdir=/opt
+

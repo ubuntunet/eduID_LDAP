@@ -134,6 +134,15 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.10
 #
 ################################################################################
 #
+attributeType ( 1.3.6.1.4.1.5923.1.1.1.16
+    NAME 'eduPersonOrcid'
+    DESC 'ORCID researcher identifiers belonging to the principal'
+    EQUALITY caseIgnoreMatch
+    SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
+
+#
+################################################################################
+#
 attributeType ( 1.3.6.1.4.1.5923.1.1.1.11
     NAME 'eduPersonAssurance'
     DESC 'eduPerson per Internet2 and EDUCAUSE'
