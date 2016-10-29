@@ -1,0 +1,7 @@
+wingu ansible_host=41.77.11.147
+
+[ldap:vars]
+ansible_user=smisv1
+
+[ldap]
+wingu

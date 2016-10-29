@@ -1,0 +1,7 @@
+wingu ansible_host=168.253.216.56
+
+[ldap:vars]
+ansible_user=ubuntu
+
+[ldap]
+wingu
