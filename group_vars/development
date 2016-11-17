@@ -4,6 +4,9 @@ openldap_server_country: MW
 openldap_server_location: Lilongwe
 openldap_server_organization: Dev Alliance
 
+ldap_dn: ou=people,dc=ubuntunet,dc=net
+
+
 lam:
   enabled: False
 newrelic:

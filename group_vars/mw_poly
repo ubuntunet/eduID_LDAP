@@ -4,6 +4,9 @@ openldap_server_country: MW
 openldap_server_location: Blantyre
 openldap_server_organization: Polytechnic
 
+ldap_dn: ou=people,dc=poly,dc=mw
+
+
 lam:
   enabled: False
 newrelic:
