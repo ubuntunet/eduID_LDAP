@@ -1,0 +1,10 @@
+my_ldap ansible_host=168.253.216.56
+
+[<institution>:children]
+ldap
+
+[ldap:vars]
+ansible_user=ubuntu
+
+[ldap]
+my_ldap
