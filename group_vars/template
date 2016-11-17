@@ -4,6 +4,8 @@ openldap_server_country: MW
 openldap_server_location: Lilongwe
 openldap_server_organization: Example Alliance
 
+ldap_dn: ou=people,dc=example,dc=net
+
 lam:
   enabled: False
 newrelic:
