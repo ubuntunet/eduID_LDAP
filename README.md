@@ -61,11 +61,6 @@ LAM is a webfront end for LDAP with a rich feature set (https://www.ldap-account
 * (Re)Play the playbook
 * Go to https://{{ fqdn}}
 
-## Setup FusionDirectory
-
-* Enable the 'webui' role by uncommenting it in ldap.yml
-* Go to https://{{ fqdn}}/fusiondirectory and follow the instructions
-
 
 
 ## Trouble Shooting

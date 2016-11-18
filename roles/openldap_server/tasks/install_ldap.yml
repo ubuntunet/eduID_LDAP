@@ -14,13 +14,6 @@
   environment: '{{ env }}'
   when: ansible_os_family == 'Debian'
 
-- name: Install GOsa with schema for FusionDirectory
-  apt: name={{ item }} state=installed update_cache=yes
-  with_items: 
-    - gosa
-    - gosa-schema
-
-
 - name: Delete the configuration directory
   file: path={{ openldap_server_app_path }}/slapd.d state=absent
 

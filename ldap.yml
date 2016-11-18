@@ -1,3 +1,11 @@
+- name: Make sure Python2 is available
+  hosts: ldap
+  become: True
+  gather_facts: False
+  tasks:
+    - raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+
+
 - name: Install OpenLDAP
   hosts: ldap
   become: true
@@ -5,7 +13,6 @@
     - group_vars/secrets.yml
   roles:
     - openldap_server
-    # - web_ui
     - { role: lam, when: lam.enabled == True }
     - { role: newrelic, when: newrelic.enabled == True }
 

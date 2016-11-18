@@ -10,3 +10,7 @@ lam:
   enabled: False
 newrelic:
   enabled: False  
+
+
+# Do not change this entry
+openldap_server_base_dn: "{{ 'dc=' + openldap_server_domain_name.replace('.',',dc=') }}"

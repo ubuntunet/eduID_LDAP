@@ -5,17 +5,6 @@ include         /etc/ldap/schema/nis.schema
 include         /etc/ldap/schema/eduperson.schema
 include         /etc/ldap/schema/schac.schema
 
-#GOSA ldap schemas for FusionDirectory, order is important
-include         /etc/ldap/schema/gosa/samba3.schema
-include         /etc/ldap/schema/gosa/gofon.schema
-include         /etc/ldap/schema/gosa/gosystem.schema
-include         /etc/ldap/schema/gosa/goto.schema
-include         /etc/ldap/schema/gosa/gosa-samba3.schema
-include         /etc/ldap/schema/gosa/gofax.schema
-include         /etc/ldap/schema/gosa/goserver.schema
-include         /etc/ldap/schema/gosa/goto-mime.schema
-include         /etc/ldap/schema/gosa/trust.schema
-
 pidfile         /var/run/slapd/slapd.pid
 
 argsfile        /var/run/slapd/slapd.args
@@ -28,20 +17,20 @@ moduleload      back_bdb.la
 
 access to *
                 by self write
-                by dn.base="cn=Manager,dc={{ openldap_server_domain_name.split('.')[0] }},dc={{ openldap_server_domain_name.split('.')[1] }}" write
+                by dn.base="cn=Manager,{{ openldap_server_base_dn }}" write
                 by * read
 access to attrs=userPassword
                 by self write
                 by anonymous auth
-                by dn.base="cn=Manager,dc={{ openldap_server_domain_name.split('.')[0] }},dc={{ openldap_server_domain_name.split('.')[1] }}" write
+                by dn.base="cn=Manager,{{ openldap_server_base_dn }}" write
                 by * none
 access to attrs=shadowLastChange
                 by self write
                 by * read
 
 database        bdb
-suffix          "dc={{ openldap_server_domain_name.split('.')[0] }},dc={{ openldap_server_domain_name.split('.')[1] }}"
-rootdn          "cn=Manager,dc={{ openldap_server_domain_name.split('.')[0] }},dc={{ openldap_server_domain_name.split('.')[1] }}"
+suffix          "{{ openldap_server_base_dn }}"
+rootdn          "cn=Manager,{{ openldap_server_base_dn }}"
 rootpw          {{ root_password.stdout }}
 #This directory has to be created and would contain the ldap database.
 directory       /var/lib/ldap/{{ openldap_server_domain_name }}/

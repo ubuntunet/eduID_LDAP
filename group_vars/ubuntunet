@@ -1,4 +1,5 @@
 openldap_server_domain_name: ubuntunet.net
+openldap_server_base_dn: "{{ 'dc=' + openldap_server_domain_name.replace('.',',dc=') }}"
 openldap_server_enable_ssl: false
 openldap_server_country: MW
 openldap_server_location: Lilongwe

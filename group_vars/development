@@ -4,7 +4,7 @@ openldap_server_country: MW
 openldap_server_location: Lilongwe
 openldap_server_organization: Dev Alliance
 
-ldap_dn: ou=people,dc=ubuntunet,dc=net
+ldap_dn: ou=people,dc=dev,dc=ubuntunet,dc=net
 
 
 lam:

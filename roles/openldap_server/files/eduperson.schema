@@ -1,38 +1,8 @@
+# eduPerson (201602)
+# $Customized for OpenLDAP$
+################################################################################
 #
-# eduperson.schema (OpenLDAP)
-# other schema files: see https://spaces.internet2.edu/display/macedir/LDIFs
-#
-# eduPerson Objectclass (200806)
-#
-# See http://middleware.internet2.edu/eduperson/ for background and usage
-#
-# eduPerson is an effort of Internet2 and EDUCAUSE
-#
-#
-#
-# When modifying objectclass eduperson -- 
-#                we first must delete the objectclass
-# and then re-add -- make sure all replicas are functioning.  Try to do this
-# during an inactive period of services (if possible).
-#
-# Modifying schema may only affect the instance being modified -- 
-#                     it may NOT replicate!
-#
-# check your server documentation to verify this.
-#
-# 1.3.6.1.4.1.5923 is the toplevel OID for this work
-#	          .1 = MACE related work
-#	          .1.1 = eduPerson
-#	          .1.1.1 = attributes
-#	          .1.1.2 = objectclass
-#	          .1.1.3 = syntax (probably never used)
-#	          .1.2 = eduOrg
-#	          .1.2.1 = attributes
-#	          .1.2.2 = objectclass
-#	          .1.2.3 = syntax (probably never used)
-#
-#
-# "eduPerson" attributes
+# dn: cn=schema
 #
 ################################################################################
 #
@@ -42,7 +12,6 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.1
     EQUALITY caseIgnoreMatch
     SUBSTR caseIgnoreSubstringsMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
-
 #
 ################################################################################
 #
@@ -52,7 +21,6 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.2
     EQUALITY caseIgnoreMatch
     SUBSTR caseIgnoreSubstringsMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
-
 #
 ################################################################################
 #
@@ -62,7 +30,6 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.3
     EQUALITY distinguishedNameMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.12'
     SINGLE-VALUE )
-
 #
 ################################################################################
 #
@@ -71,7 +38,6 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.4
     DESC 'eduPerson per Internet2 and EDUCAUSE'
     EQUALITY distinguishedNameMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.12' )
-
 #
 ################################################################################
 #
@@ -82,7 +48,6 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.5
     SUBSTR caseIgnoreSubstringsMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
     SINGLE-VALUE )
-
 #
 ################################################################################
 #
@@ -93,7 +58,15 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.6
     SUBSTR caseIgnoreSubstringsMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
     SINGLE-VALUE )
-
+#
+################################################################################
+#
+attributeType ( 1.3.6.1.4.1.5923.1.1.1.12
+    NAME 'eduPersonPrincipalNamePrior'
+    DESC 'eduPerson per Internet2 and EDUCAUSE'
+    EQUALITY caseIgnoreMatch
+    SUBSTR caseIgnoreSubstringsMatch
+    SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
 #
 ################################################################################
 #
@@ -102,7 +75,6 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.7
     DESC 'eduPerson per Internet2 and EDUCAUSE'
     EQUALITY caseExactMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
-
 #
 ################################################################################
 #
@@ -112,7 +84,6 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.8
     EQUALITY distinguishedNameMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.12'
     SINGLE-VALUE )
-
 #
 ################################################################################
 #
@@ -121,7 +92,6 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.9
     DESC 'eduPerson per Internet2 and EDUCAUSE'
     EQUALITY caseIgnoreMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
-
 #
 ################################################################################
 #
@@ -130,16 +100,6 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.10
     DESC 'eduPerson per Internet2 and EDUCAUSE'
     EQUALITY caseIgnoreMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
-
-#
-################################################################################
-#
-attributeType ( 1.3.6.1.4.1.5923.1.1.1.16
-    NAME 'eduPersonOrcid'
-    DESC 'ORCID researcher identifiers belonging to the principal'
-    EQUALITY caseIgnoreMatch
-    SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
-
 #
 ################################################################################
 #
@@ -148,7 +108,22 @@ attributeType ( 1.3.6.1.4.1.5923.1.1.1.11
     DESC 'eduPerson per Internet2 and EDUCAUSE'
     EQUALITY caseIgnoreMatch
     SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
-
+#
+################################################################################
+#
+attributeType ( 1.3.6.1.4.1.5923.1.1.1.13
+    NAME 'eduPersonUniqueId'
+    DESC 'eduPersonUniqueId per Internet2'
+    EQUALITY caseIgnoreMatch
+    SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
+#
+################################################################################
+#
+attributeType ( 1.3.6.1.4.1.5923.1.1.1.16
+    NAME 'eduPersonOrcid'
+    DESC 'ORCID researcher identifiers belonging to the principal'
+    EQUALITY caseIgnoreMatch
+    SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
 #
 ################################################################################
 #
@@ -156,11 +131,11 @@ objectClass ( 1.3.6.1.4.1.5923.1.1.2
     NAME 'eduPerson'
     DESC 'eduPerson per Internet2 and EDUCAUSE'
     AUXILIARY
-    MAY ( eduPersonAffiliation $ eduPersonNickname $ eduPersonOrgDN $ 
-          eduPersonOrgUnitDN $ eduPersonPrimaryAffiliation $ 
-          eduPersonPrincipalName $ eduPersonEntitlement $ 
-          eduPersonPrimaryOrgUnitDN $ eduPersonScopedAffiliation $ 
-          eduPersonTargetedID $ eduPersonAssurance ) )
-
-
+    MAY ( eduPersonAffiliation $ eduPersonNickname $ eduPersonOrgDN $
+          eduPersonOrgUnitDN $ eduPersonPrimaryAffiliation $
+          eduPersonPrincipalName $ eduPersonPrincipalNamePrior $ eduPersonEntitlement $
+          eduPersonPrimaryOrgUnitDN $ eduPersonScopedAffiliation $
+          eduPersonTargetedID $ eduPersonAssurance $
+          eduPersonUniqueId $ eduPersonOrcid ) )
+#
 ################################################################################

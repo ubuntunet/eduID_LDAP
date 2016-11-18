@@ -37,7 +37,10 @@
    - restart slapd
 
 - name: copy the eduperson schema
-  copy: src=eduperson.schema dest=/etc/ldap/schema mode=0755
+  copy: 
+    src: eduperson.schema 
+    dest: /etc/ldap/schema 
+    mode: 0755
   when: ansible_os_family == 'Debian'
   notify: 
    - restart slapd
@@ -50,13 +53,13 @@
 
 
 - name: start the slapd service
-  service: name=slapd state=started enabled=yes 
+  service: name=slapd state=started enabled=yes
   
 - name: Copy the template for creating base dn
   template: src={{ openldap_server_ldif }} dest=/tmp/
   register: result
 
 - name: add the base domain
-  shell: ldapadd -x -D "cn=Manager,dc={{ openldap_server_domain_name.split('.')[0] }},dc={{ openldap_server_domain_name.split('.')[1] }}" -w {{ openldap_server_rootpw }} -f {{ result.dest|default(result.path) }} && touch {{ openldap_server_app_path }}/rootdn_created creates={{ openldap_server_app_path }}/rootdn_created 
-  no_log: true
+  shell: ldapadd -x -D "cn=Manager,{{ openldap_server_base_dn }}" -w {{ openldap_server_rootpw }} -f {{ result.dest|default(result.path) }} && touch {{ openldap_server_app_path }}/rootdn_created creates={{ openldap_server_app_path }}/rootdn_created 
+  # no_log: true
   
