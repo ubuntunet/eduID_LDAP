@@ -1,10 +1,12 @@
-openldap_server_domain_name: ldap.me
+openldap_server_domain_name: eduroam.me
+openldap_server_base_dn: "{{ 'dc=' + openldap_server_domain_name.replace('.',',dc=') }}"
+
 openldap_server_enable_ssl: False
-openldap_server_country: UG
-openldap_server_location: Entebbe
+openldap_server_country: ME
+openldap_server_location: Lilongwe
 openldap_server_organization: UbuntuNet Alliance
 
-ldap_dn: ou=people,dc=ldap,dc=me
+ldap_dn: ou=people,dc=eduroam,dc=me
 
 lam:
   enabled: False
