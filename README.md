@@ -66,7 +66,10 @@ LAM is a webfront end for LDAP with a rich feature set (https://www.ldap-account
 ## Trouble Shooting
 
 If you changed your rootpw, you need to remove the slapd service on the server manually for the new rootpw to be picked up. This has also helped me in other hopeless situations.
+
 ```
 sudo aptitude purge slapd
+sudo rm /etc/ldap/rootdn_created
+sudo rm /root/.entriesadded
 ```
 

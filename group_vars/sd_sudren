@@ -1,0 +1,14 @@
+openldap_server_domain_name: ldap.sudren.edu.sd
+openldap_server_base_dn: "{{ 'dc=' + openldap_server_domain_name.replace('.',',dc=') }}"
+
+openldap_server_enable_ssl: false
+openldap_server_country: SD
+openldap_server_location: Sudan
+openldap_server_organization: SudREN
+
+ldap_dn: ou=people,dc=ldap,dc=sudren,dc=edu,dc=sd
+
+lam:
+  enabled: False
+newrelic:
+  enabled: False
