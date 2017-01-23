@@ -31,7 +31,7 @@ Some values - passwords, credentials - are sensitive and should never be submitt
 
 Create the secrets.yml file
 
-        cp group_vars/secrets.yml.example group_vars/serets.yml
+        cp group_vars/secrets.yml.example group_vars/secrets.yml
 
 Open the secrets.yml file and add the sensitive values.
 
