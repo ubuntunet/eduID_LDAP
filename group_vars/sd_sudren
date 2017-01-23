@@ -1,5 +1,6 @@
 openldap_server_domain_name: ldap.sudren.edu.sd
 openldap_server_base_dn: "{{ 'dc=' + openldap_server_domain_name.replace('.',',dc=') }}"
+
 openldap_server_enable_ssl: false
 openldap_server_country: SD
 openldap_server_location: Sudan

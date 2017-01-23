@@ -1,10 +1,11 @@
-wingu ansible_host=168.253.217.12
+my_ldap ansible_host=168.253.217.25
+
+[me_eduroam:children]
+ldap
 
 [ldap:vars]
 ansible_user=ubuntu
 
 [ldap]
-wingu
+my_ldap
 
-[me_eduroam:children]
-ldap

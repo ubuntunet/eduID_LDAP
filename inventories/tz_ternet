@@ -1,0 +1,10 @@
+my_ldap ansible_host=ldap.ternet.or.tz
+
+[tz_ternet:children]
+ldap
+
+[ldap:vars]
+ansible_user=ubuntu
+
+[ldap]
+my_ldap

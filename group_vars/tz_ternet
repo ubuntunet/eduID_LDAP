@@ -1,0 +1,16 @@
+openldap_server_domain_name: ternet.or.tz
+openldap_server_enable_ssl: false
+openldap_server_country: TZ
+openldap_server_location: Dar es Salaam
+openldap_server_organization: TERNET
+
+ldap_dn: ou=people,dc=ternet,dc=or,dc=tz
+
+lam:
+  enabled: False
+newrelic:
+  enabled: False  
+
+
+# Do not change this entry
+openldap_server_base_dn: "{{ 'dc=' + openldap_server_domain_name.replace('.',',dc=') }}"
