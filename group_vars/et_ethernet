@@ -1,0 +1,15 @@
+openldap_server_domain_name: ethernet.edu.et
+openldap_server_enable_ssl: false
+openldap_server_country: ET
+openldap_server_location: Addis Ababa
+openldap_server_organization: EthERNet
+
+ldap_dn: ou=people,dc=ethernet,dc=edu,dc=et
+
+lam:
+  enabled: False
+newrelic:
+  enabled: False  
+
+# Do not change this entry
+openldap_server_base_dn: "{{ 'dc=' + openldap_server_domain_name.replace('.',',dc=') }}"
