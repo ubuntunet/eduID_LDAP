@@ -39,18 +39,17 @@
 - name: copy the eduperson schema
   copy: 
     src: eduperson.schema 
-    dest: /etc/ldap/schema 
+    dest: "{{ openldap_server_app_path }}schema" 
     mode: 0755
-  when: ansible_os_family == 'Debian'
+  #when: ansible_os_family == 'Debian'
   notify: 
    - restart slapd
 
 - name: copy the schac schema
-  copy: src=schac.schema dest=/etc/ldap/schema mode=0755
-  when: ansible_os_family == 'Debian'
+  copy: src=schac.schema dest="{{ openldap_server_app_path }}schema" mode=0755
+  #when: ansible_os_family == 'Debian'
   notify: 
    - restart slapd
-
 
 - name: start the slapd service
   service: name=slapd state=started enabled=yes
