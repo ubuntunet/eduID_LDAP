@@ -44,6 +44,18 @@ There are many ways to create random passwords/passphrases/salt, I prefer to use
 
         ansible-playbook -i inventories/<institution> ldap.yml 
 
+
+
+### Open Ports on Firewall
+
+The following ports need to be in order for LDAP/S to work properly:
+```
+TCP 389
+TCP 636
+```
+
+### Deploy locally with Vagrant
+
 If you want to try it out locally, and you have Vagrant/Virtualbox installed, the following command will run the playbook using the development inventory/variabels.
 
         vagrant up --provision
