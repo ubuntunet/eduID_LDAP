@@ -6,6 +6,7 @@ openldap_server_organization: TERNET
 
 ldap_dn: ou=people,dc=ternet,dc=or,dc=tz
 
+# Roles
 lam:
   enabled: False
 newrelic:
@@ -13,4 +14,6 @@ newrelic:
 
 
 # Do not change this entry
-openldap_server_base_dn: "{{ 'dc=' + openldap_server_domain_name.replace('.',',dc=') }}"
+openldap_server_base_dn: "dc=ternet,dc=or,dc=tz"
+#This wasn't working, no idea why
+#openldap_server_base_dn: "{{ 'dc=' + openldap_server_domain_name.replace('.',',dc=') }}"
