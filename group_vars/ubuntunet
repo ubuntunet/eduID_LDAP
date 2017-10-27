@@ -9,5 +9,3 @@ ldap_dn: ou=people,dc=ubuntunet,dc=net
 
 lam:
   enabled: False
-newrelic:
-  enabled: False  
