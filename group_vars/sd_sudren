@@ -10,5 +10,3 @@ ldap_dn: ou=people,dc=ldap,dc=sudren,dc=edu,dc=sd
 
 lam:
   enabled: False
-newrelic:
-  enabled: False

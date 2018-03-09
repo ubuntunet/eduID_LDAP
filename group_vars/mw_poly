@@ -9,5 +9,3 @@ ldap_dn: ou=people,dc=poly,dc=mw
 
 lam:
   enabled: False
-newrelic:
-  enabled: False  
